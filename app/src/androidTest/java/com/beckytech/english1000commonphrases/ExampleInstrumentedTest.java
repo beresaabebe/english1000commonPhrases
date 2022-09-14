@@ -1,4 +1,4 @@
-package com.beckytech.starter;
+package com.beckytech.english1000commonphrases;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.beckytech.starter", appContext.getPackageName());
+        assertEquals("com.beckytech.english1000commonphrases", appContext.getPackageName());
     }
 }

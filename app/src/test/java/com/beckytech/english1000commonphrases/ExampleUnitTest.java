@@ -1,4 +1,4 @@
-package com.beckytech.starter;
+package com.beckytech.english1000commonphrases;
 
 import org.junit.Test;
 

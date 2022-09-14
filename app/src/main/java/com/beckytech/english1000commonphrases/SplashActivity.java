@@ -1,4 +1,4 @@
-package com.beckytech.starter;
+package com.beckytech.english1000commonphrases;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;

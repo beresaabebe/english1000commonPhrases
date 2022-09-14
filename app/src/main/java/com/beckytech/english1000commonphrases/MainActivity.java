@@ -1,12 +1,4 @@
-package com.beckytech.starter;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.content.res.AppCompatResources;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
+package com.beckytech.english1000commonphrases;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -19,9 +11,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.content.res.AppCompatResources;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
@@ -30,9 +30,17 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
+
+public class MainActivity extends AppCompatActivity implements Adapter.onClickedContent {
     private InterstitialAd mInterstitialAd;
     private DrawerLayout drawerLayout;
+    private List<Model> list;
+    private final SubTitleContent subTitleContent = new SubTitleContent();
+    private final TitleContent titleContent = new TitleContent();
+    private final ContentDetail contentDetail = new ContentDetail();
+    private final CategoryContent categoryContent = new CategoryContent();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,10 +52,6 @@ public class MainActivity extends AppCompatActivity {
         MobileAds.initialize(this, initializationStatus -> {
         });
 
-        AdView mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-
         drawerLayout = findViewById(R.id.drawer_layout);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -58,6 +62,21 @@ public class MainActivity extends AppCompatActivity {
 
         NavigationView navigationView = findViewById(R.id.navigationView);
         navigationView.setNavigationItemSelectedListener(item -> {MenuOptions(item); return true;});
+
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        getData();
+        Adapter adapter = new Adapter(list, this);
+        recyclerView.setAdapter(adapter);
+    }
+
+    private void getData() {
+        list = new ArrayList<>();
+        for (int i = 0; i <= 31; i++) {
+            list.add(new Model(titleContent.title[i].substring(0,1).toUpperCase()+""+titleContent.title[i].substring(1),
+                    subTitleContent.subTitle[i].substring(0,1).toUpperCase()+""+subTitleContent.subTitle[i].substring(1),
+                    contentDetail.content[i],
+                    categoryContent.categories[i]));
+        }
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")
@@ -221,5 +240,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onContextItemSelected(@NonNull MenuItem item) {
         MenuOptions(item);
         return true;
+    }
+
+    @Override
+    public void itemClicked(Model model) {
+        startActivity(new Intent(MainActivity.this, PhraseDetailActivity.class).putExtra("data", model));
     }
 }

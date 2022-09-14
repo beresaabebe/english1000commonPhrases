@@ -1,46 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="200dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/white"
     android:elevation="2dp"
-    app:cardMaxElevation="5dp"
-    android:background="@color/white">
+    app:cardCornerRadius="2dp"
+    android:layout_marginBottom="3dp"
+    app:cardMaxElevation="5dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:src="@drawable/images_start"
-            android:scaleType="fitXY"
-            android:id="@+id/images"/>
+        android:background="@drawable/bg_onclick">
 
         <TextView
+            android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/images"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/black"
+            android:ellipsize="marquee"
+            android:fontFamily="serif"
+            android:gravity="start"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
             android:text="@string/app_name"
-            android:id="@+id/title"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:gravity="center_horizontal"
-            android:fontFamily="serif"/>
+            android:textSize="16sp" />
 
         <TextView
+            android:id="@+id/subTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/title"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:fontFamily="serif"
+            android:textColor="#686868"
+            android:gravity="start"
             android:text="@string/app_name"
-            android:id="@+id/subTitle"
-            android:textSize="16sp"
-            android:textStyle="italic"
-            android:gravity="center_horizontal"
-            android:fontFamily="serif"/>
+            android:textSize="13sp"
+            android:textStyle="italic" />
 
     </RelativeLayout>
 

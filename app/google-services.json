@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "460345137428",
+    "project_id": "english1000commonphrases",
+    "storage_bucket": "english1000commonphrases.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460345137428:android:612815c038edf87d8fca01",
+        "android_client_info": {
+          "package_name": "com.beckytech.english1000commonphrases"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460345137428-ruvuki0vb7c5trnicbeugcv9sctgvgr7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDezQp2Bc-Er0XS4oThlc9DTbNM0wKke2c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "460345137428-ruvuki0vb7c5trnicbeugcv9sctgvgr7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

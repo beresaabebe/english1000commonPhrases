@@ -1,4 +1,4 @@
-package com.beckytech.starter;
+package com.beckytech.english1000commonphrases;
 
 import static androidx.lifecycle.Lifecycle.Event.ON_START;
 
@@ -27,7 +27,7 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
     private static final String LOG_TAG = "AppOpenManager";
     private static final String AD_UNIT_ID = "ca-app-pub-3940256099942544/3419835294";
     private static boolean isShowingAd = false;
-    private final com.beckytech.starter.MyApplication myApplication;
+    private final com.beckytech.english1000commonphrases.MyApplication myApplication;
     private AppOpenAd appOpenAd = null;
     private Activity currentActivity;
     private long loadTime = 0;
@@ -35,7 +35,7 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
     /**
      * Constructor
      */
-    public AppOpenManager(com.beckytech.starter.MyApplication myApplication) {
+    public AppOpenManager(com.beckytech.english1000commonphrases.MyApplication myApplication) {
         this.myApplication = myApplication;
         this.myApplication.registerActivityLifecycleCallbacks(this);
         ProcessLifecycleOwner.get().getLifecycle().addObserver(this);

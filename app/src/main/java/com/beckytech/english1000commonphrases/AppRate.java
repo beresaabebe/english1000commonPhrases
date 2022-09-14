@@ -1,4 +1,4 @@
-package com.beckytech.starter;
+package com.beckytech.english1000commonphrases;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class AppRate {
     private final static String APP_TITLE = String.valueOf(R.string.app_name);// App Name
-    private static final String APP_PNAME = "com.beckytech.starter";// Package Name
+    private static final String APP_PNAME = "com.beckytech.english1000commonphrases";// Package Name
 
     private final static int DAYS_UNTIL_PROMPT = 3;//Min number of days
     private final static int LAUNCHES_UNTIL_PROMPT = 3;//Min number of launches
