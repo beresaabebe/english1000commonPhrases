@@ -7,7 +7,7 @@
     android:layout_weight="100"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".AboutActivity">
+    tools:context=".activity.AboutActivity">
 
     <RelativeLayout
         android:id="@+id/toolbar"

@@ -1,4 +1,4 @@
-package com.beckytech.english1000commonphrases;
+package com.beckytech.english1000commonphrases.activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -7,6 +7,9 @@ import android.os.Handler;
 import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.beckytech.english1000commonphrases.MainActivity;
+import com.beckytech.english1000commonphrases.R;
 
 @SuppressLint("CustomSplashScreen")
 public class SplashActivity extends AppCompatActivity {

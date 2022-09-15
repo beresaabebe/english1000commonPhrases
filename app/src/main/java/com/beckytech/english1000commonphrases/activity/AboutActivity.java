@@ -1,4 +1,4 @@
-package com.beckytech.english1000commonphrases;
+package com.beckytech.english1000commonphrases.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.webkit.WebView;
 import android.widget.TextView;
 
+import com.beckytech.english1000commonphrases.BuildConfig;
+import com.beckytech.english1000commonphrases.R;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
@@ -35,6 +37,6 @@ public class AboutActivity extends AppCompatActivity {
         webView.loadUrl("file:///android_asset/about.html");
 
         TextView version = findViewById(R.id.version_tv);
-        version.setText(String.format(Locale.ENGLISH," %s",BuildConfig.VERSION_NAME));
+        version.setText(String.format(Locale.ENGLISH," %s", BuildConfig.VERSION_NAME));
     }
 }

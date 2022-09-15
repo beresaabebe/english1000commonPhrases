@@ -1,4 +1,4 @@
-package com.beckytech.english1000commonphrases;
+package com.beckytech.english1000commonphrases.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +7,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.beckytech.english1000commonphrases.model.Model;
+import com.beckytech.english1000commonphrases.R;
 
 import java.util.List;
 

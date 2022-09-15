@@ -1,4 +1,4 @@
-package com.beckytech.english1000commonphrases;
+package com.beckytech.english1000commonphrases.model;
 
 import java.io.Serializable;
 

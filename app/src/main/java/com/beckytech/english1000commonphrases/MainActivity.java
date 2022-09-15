@@ -20,6 +20,14 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.beckytech.english1000commonphrases.activity.AboutActivity;
+import com.beckytech.english1000commonphrases.activity.PhraseDetailActivity;
+import com.beckytech.english1000commonphrases.adapter.Adapter;
+import com.beckytech.english1000commonphrases.contents.CategoryContent;
+import com.beckytech.english1000commonphrases.contents.ContentDetail;
+import com.beckytech.english1000commonphrases.contents.SubTitleContent;
+import com.beckytech.english1000commonphrases.contents.TitleContent;
+import com.beckytech.english1000commonphrases.model.Model;
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.FullScreenContentCallback;
@@ -71,8 +79,8 @@ public class MainActivity extends AppCompatActivity implements Adapter.onClicked
 
     private void getData() {
         list = new ArrayList<>();
-        for (int i = 0; i <= 31; i++) {
-            list.add(new Model(titleContent.title[i].substring(0,1).toUpperCase()+""+titleContent.title[i].substring(1),
+        for (int i = 0; i < titleContent.title.length; i++) {
+            list.add(new Model(titleContent.title[i].substring(0,1).toUpperCase()+""+titleContent.title[i].substring(1).toLowerCase(),
                     subTitleContent.subTitle[i].substring(0,1).toUpperCase()+""+subTitleContent.subTitle[i].substring(1),
                     contentDetail.content[i],
                     categoryContent.categories[i]));
