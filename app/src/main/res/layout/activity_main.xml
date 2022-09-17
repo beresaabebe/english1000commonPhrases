@@ -14,4 +14,9 @@
         tools:listitem="@layout/main_item_list"
         android:id="@+id/recyclerView"/>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_below="@id/recyclerView"
+        android:layout_height="150dp"/>
+
 </RelativeLayout>

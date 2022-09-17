@@ -12,7 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.beckytech.english1000commonphrases.activity.SearchGoogleActivity;
+import com.beckytech.english1000commonphrases.activity.SingleContentActivity;
 import com.beckytech.english1000commonphrases.model.ModelDetail;
 import com.beckytech.english1000commonphrases.R;
 
@@ -41,18 +41,14 @@ public class AdapterDetail extends RecyclerView.Adapter<AdapterDetail.DetailView
         ModelDetail modelDetail = modelDetails.get(position);
         holder.text_original.setText(modelDetail.getTextOriginal());
         String word = modelDetail.getTextOriginal();
-        holder.play_btn.setOnClickListener(v -> {
-            textToSpeech = new TextToSpeech(context, status -> {
-               if (status != TextToSpeech.ERROR) {
-                   textToSpeech.setLanguage(Locale.ENGLISH);
-                   textToSpeech.speak(word, TextToSpeech.QUEUE_FLUSH, null, null);
-               }
-            });
-        });
+        holder.play_btn.setOnClickListener(v -> textToSpeech = new TextToSpeech(context, status -> {
+           if (status != TextToSpeech.ERROR) {
+               textToSpeech.setLanguage(Locale.ENGLISH);
+               textToSpeech.speak(word, TextToSpeech.QUEUE_FLUSH, null, null);
+           }
+        }));
 
-        holder.text_original.setOnClickListener(v -> {
-            context.startActivity(new Intent(context, SearchGoogleActivity.class).putExtra("query", word));
-        });
+        holder.text_original.setOnClickListener(v -> context.startActivity(new Intent(context, SingleContentActivity.class).putExtra("passedValue", word)));
     }
 
     @Override

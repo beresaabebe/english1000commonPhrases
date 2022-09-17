@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/bing"
+        android:id="@+id/bing_search"/>
+
+    <item android:id="@+id/collins_search"
+        android:title="@string/collins"/>
+
+    <item android:id="@+id/wikibooks_search"
+        android:title="@string/wikibooks"/>
+
+    <item android:title="@string/word_references"
+        android:id="@+id/word_reference_search"/>
+
+    <item android:id="@+id/google_translator_search"
+        android:title="@string/google_translator"/>
+
+    <item android:title="@string/youtube"
+        android:id="@+id/youtube_search"/>
+
+    <item android:title="@string/pinterest"
+        android:id="@+id/pinterest"/>
+</menu>

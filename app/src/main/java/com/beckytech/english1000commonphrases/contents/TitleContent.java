@@ -138,5 +138,38 @@ public class TitleContent {
             "what to say to a smoker",
             "a smoker's response to a nonsmoker's complaint",
             "questions a smoker might ask",
+
+            "When someone says something outrageous",
+            "Asking in disbelief or disagreement",
+            "Encouraging someone to be more sensible",
+            "Asking about the alertness of someone",
+            "Questioning someone’s sanity",
+            "Calling someone crazy",
+            "Criticism of someone with whom you disagree",
+
+            "asking for an explanation",
+            "Encouraging an explanation",
+            "When you do not understand someone",
+            "When someone does not understand you",
+            "Criticizing someone’s misunderstanding",
+            "Attempting to put an end to a misunderstanding",
+            "Encouraging someone to believe you",
+            "Asking to be trusted",
+            "Stating that something is settled",
+            "Claiming that something is easy to understand",
+            "Showing disbelief",
+            "Expressing ignorance",
+            "Expressing reluctance",
+            " Making the best of a bad situation",
+            "Blaming something on fate or destiny",
+            "Knowing something after the fact",
+            "Expressing indifference",
+
+            "A preface to asking a question",
+            "A preface to making a statement—formal",
+            "A preface to making a statement—informal",
+            "A preface to making a statement—very polite",
+
+            "Asking if someone speaks a particular language"
     };
 }

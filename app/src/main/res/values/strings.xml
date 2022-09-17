@@ -14,4 +14,13 @@
     <string name="version">Version - </string>
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="test_interstitial_ads_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="google_search">Google search</string>
+    <string name="collins">Collins Dictionary</string>
+    <string name="bing">Bing search</string>
+    <string name="word_references">Word References</string>
+    <string name="bing_dictionary">Bing Dictionary</string>
+    <string name="google_translator">Google Translator</string>
+    <string name="youtube">Youtube</string>
+    <string name="wikibooks">Wikibooks</string>
+    <string name="pinterest">Pinterest</string>
 </resources>
