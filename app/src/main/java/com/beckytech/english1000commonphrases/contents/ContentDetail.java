@@ -171,6 +171,20 @@ public class ContentDetail {
             "As you requested . . .",
 
             "Do you speak French? French = Spanish, German, Russian, Italian, etc.",
+            "I’m sorry. I don’t understand.",
+            "Pardon me?",
+            "I don’t understand you.",
+
+            "What time is it?",
+            "It’s twelve noon.",
+            "It’s three.",
+            "It’s almost three.",
+            "It’s ten after three.",
+            "It’s three fifteen.",
+            "It’s three forty.",
+            "It’s three forty-five.",
+            "It’s ten minutes to four.",
+            "Is this clock right?",
 
             "Where is the nearest post office?",
             "Can you tell me the way to the Big Hotel?",
@@ -2432,5 +2446,88 @@ public class ContentDetail {
 
             "Do you know any French?",
             "Do you speak any French?",
+
+            "I’m sorry. I don’t speak French. = Spanish, German, Russian, Italian, etc.",
+            "I’m sorry. My French isn’t very good.",
+            "I only speak a little French.",
+
+            "Excuse me?",
+            "Again, (please). I’m sorry?",
+            "I’m sorry. I missed that.=> missed that = failed to hear what was said",
+            "I didn’t quite get that. => to get that = to hear or understand what was said",
+            "What did you say?",
+            "I’m sorry. What?",
+            "What?",
+            "What was that?",
+            "Come again. (folksy)",
+            "Huh? (informal or rude)",
+            "Could you please repeat yourself?",
+            "Could you please repeat that?",
+
+            "I can’t understand you.",
+            "I can’t hear you.",
+            "Please speak more slowly.",
+            "Could you please speak slower?",
+            "Could you please speak louder?",
+            "Could you write it down, please?",
+            "Please write it out.",
+            "Could you spell that?",
+
+            "Could you tell me what time it is?",
+            "Could you please tell me the time?",
+            "Could you give me the time?",
+            "Do you know what time it is?",
+            "Do you know the time?",
+            "Do you happen to have the time?",
+            "Do you have the correct time?",
+            "Do you have the time?",
+            "Could I bother you for the time?",
+
+            "It’s noon.",
+            "It’s twelve midnight.",
+            "It’s midnight.",
+
+            "It’s three o’clock.",
+            "It’s three o’clock.",
+            "It’s three o’clock sharp.",
+            "It’s three o’clock on the dot.",
+            "It’s three o’clock on the nose. (informal)",
+            "It’s exactly three o’clock.",
+
+            "It’s not quite three.",
+            "It’s just after three.",
+
+            "It’s ten after.",
+            "It’s ten minutes after three.",
+            "It’s ten past three.",
+            "It’s ten past.",
+
+            "It’s a quarter past three.",
+            "It’s three thirty.",
+            "It’s half past three.",
+            "It’s half past.",
+
+            "It’s twenty of four.",
+            "It’s twenty to four.",
+            "It’s twenty till four.",
+            "It’s twenty minutes till four.",
+
+            "It’s quarter to four.",
+            "It’s a quarter of four.",
+            "It’s quarter to.",
+            "It’s a quarter of.",
+            "It’s a quarter till.",
+            "It’s a quarter till four.",
+
+            "It’s ten to four.",
+            "It’s ten to.",
+            "It’s ten of.",
+            "It’s ten till.",
+
+            "I think my watch needs a new battery.",
+            "This clock is fast.",
+            "This clock is slow.",
+            "My watch is running fast.",
+            "My watch has been running slow."
     };
 }

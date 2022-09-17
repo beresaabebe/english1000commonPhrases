@@ -170,6 +170,20 @@ public class SubTitleContent {
             "POLITE ENCOUNTERS - Prefaces",
             "POLITE ENCOUNTERS - Prefaces",
 
-            "Communication Barriers"
+            "Communication Barriers",
+            "Communication Barriers",
+            "Communication Barriers",
+            "Communication Barriers",
+
+            "Telling Time",
+            "Telling Time",
+            "Telling Time",
+            "Telling Time",
+            "Telling Time",
+            "Telling Time",
+            "Telling Time",
+            "Telling Time",
+            "Telling Time",
+            "Telling Time"
     };
 }

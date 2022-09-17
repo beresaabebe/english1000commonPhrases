@@ -3,6 +3,8 @@ package com.beckytech.english1000commonphrases.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,16 +13,20 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.beckytech.english1000commonphrases.model.Model;
 import com.beckytech.english1000commonphrases.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class Adapter extends RecyclerView.Adapter<Adapter.ContentViewHolder> {
+public class Adapter extends RecyclerView.Adapter<Adapter.ContentViewHolder> implements Filterable {
 
-    private final List<Model> modelList;
-    private final onClickedContent onClickedContent;
+    public List<Model> modelList;
+    public onClickedContent onClickedContent;
+    public List<Model> filterModels;
+    public Filter filter;
 
     public Adapter(List<Model> modelList, onClickedContent onClickedContent) {
         this.modelList = modelList;
         this.onClickedContent = onClickedContent;
+        this.filterModels = modelList;
     }
 
     @NonNull
@@ -40,6 +46,40 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ContentViewHolder> {
     @Override
     public int getItemCount() {
         return modelList.size();
+    }
+
+    @Override
+    public Filter getFilter() {
+        filter = new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence constraint) {
+                FilterResults results = new FilterResults();
+                if (constraint == null || constraint.length() == 0) {
+                    results.values = filterModels;
+                    results.count = filterModels.size();
+                } else {
+                    String search = constraint.toString().toLowerCase();
+                    List<Model> searchModelList = new ArrayList<>();
+                    for (Model model : filterModels) {
+                        if (model.getTitle().toLowerCase().contains(search) ||
+                                model.getContent().toLowerCase().contains(search)) {
+                            searchModelList.add(model);
+                        }
+                    }
+                    results.values = searchModelList;
+                    results.count = searchModelList.size();
+                }
+                return results;
+            }
+
+            @Override
+            protected void publishResults(CharSequence constraint, FilterResults results) {
+                modelList = (List<Model>) results.values;
+                notifyDataSetChanged();
+            }
+        };
+
+        return filter;
     }
 
     public interface onClickedContent {

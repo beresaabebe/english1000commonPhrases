@@ -170,6 +170,20 @@ public class TitleContent {
             "A preface to making a statement—informal",
             "A preface to making a statement—very polite",
 
-            "Asking if someone speaks a particular language"
+            "Asking if someone speaks a particular language",
+            "When you do not speak a particular language",
+            "When you do not understand what was said",
+            "When you do not understand what a foreign visitor has said",
+
+            "Asking the time of day",
+            "The time is 12:00 o’clock",
+            "The time is on the hour",
+            "The time is approximate",
+            "The time is ten minutes past the hour",
+            "The time is fifteen or thirty minutes past the hour",
+            "The time is forty minutes past the hour",
+            "The time is forty-five minutes past the hour",
+            "The time is fifty minutes past the hour",
+            "When a timepiece is not accurate"
     };
 }

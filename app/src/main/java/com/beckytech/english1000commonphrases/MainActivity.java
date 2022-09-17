@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.content.res.AppCompatResources;
+import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements Adapter.onClicked
     private final TitleContent titleContent = new TitleContent();
     private final ContentDetail contentDetail = new ContentDetail();
     private final CategoryContent categoryContent = new CategoryContent();
+    private Adapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements Adapter.onClicked
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         getData();
-        Adapter adapter = new Adapter(list, this);
+        adapter = new Adapter(list, this);
         recyclerView.setAdapter(adapter);
     }
 
@@ -89,6 +91,7 @@ public class MainActivity extends AppCompatActivity implements Adapter.onClicked
 
     @SuppressLint("UseCompatLoadingForDrawables")
     void MenuOptions(MenuItem item) {
+
         if (item.getItemId() == R.id.action_about_us) {
             if (mInterstitialAd != null) {
                 mInterstitialAd.show(MainActivity.this);
@@ -239,8 +242,23 @@ public class MainActivity extends AppCompatActivity implements Adapter.onClicked
     }
 
     @Override
-    public boolean onCreateOptionsMenu(@NonNull Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
+        MenuItem item = menu.findItem(R.id.actions_search);
+        SearchView searchView = (SearchView) item.getActionView();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter.getFilter().filter(newText);
+                return true;
+            }
+        });
         return true;
     }
 

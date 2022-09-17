@@ -171,6 +171,20 @@ public class CategoryContent {
             "making a statement very polite",
 
             "particular language",
+            "speak a particular language",
+            "understand what was said",
+            "foreign visitor has said",
+
+            "asking the time of day",
+            "1200 o clock",
+            "on the hour",
+            "time is approximate",
+            "past the hour",
+            "fifteen minutes past the hour",
+            "forty minutes past the hour",
+            "forty five minutes past the hour",
+            "fifty minutes past the hour",
+            "time piece is not accurate",
 
             "ask",
             "ask",
@@ -2431,6 +2445,89 @@ public class CategoryContent {
             "making a statement very polite",
 
             "particular language",
-            "particular language"
+            "particular language",
+
+            "speak a particular language",
+            "speak a particular language",
+            "speak a particular language",
+
+            "understand what was said",
+            "understand what was said",
+            "understand what was said",
+            "understand what was said",
+            "understand what was said",
+            "understand what was said",
+            "understand what was said",
+            "understand what was said",
+            "understand what was said",
+            "understand what was said",
+            "understand what was said",
+            "understand what was said",
+
+            "foreign visitor has said",
+            "foreign visitor has said",
+            "foreign visitor has said",
+            "foreign visitor has said",
+            "foreign visitor has said",
+            "foreign visitor has said",
+            "foreign visitor has said",
+            "foreign visitor has said",
+
+            "asking the time of day",
+            "asking the time of day",
+            "asking the time of day",
+            "asking the time of day",
+            "asking the time of day",
+            "asking the time of day",
+            "asking the time of day",
+            "asking the time of day",
+            "asking the time of day",
+
+            "1200 o clock",
+            "1200 o clock",
+            "1200 o clock",
+
+            "on the hour",
+            "on the hour",
+            "on the hour",
+            "on the hour",
+            "on the hour",
+            "on the hour",
+
+            "time is approximate",
+            "time is approximate",
+
+            "past the hour",
+            "past the hour",
+            "past the hour",
+            "past the hour",
+
+            "fifteen minutes past the hour",
+            "fifteen minutes past the hour",
+            "fifteen minutes past the hour",
+            "fifteen minutes past the hour",
+
+            "forty minutes past the hour",
+            "forty minutes past the hour",
+            "forty minutes past the hour",
+            "forty minutes past the hour",
+
+            "forty five minutes past the hour",
+            "forty five minutes past the hour",
+            "forty five minutes past the hour",
+            "forty five minutes past the hour",
+            "forty five minutes past the hour",
+            "forty five minutes past the hour",
+
+            "fifty minutes past the hour",
+            "fifty minutes past the hour",
+            "fifty minutes past the hour",
+            "fifty minutes past the hour",
+
+            "time piece is not accurate",
+            "time piece is not accurate",
+            "time piece is not accurate",
+            "time piece is not accurate",
+            "time piece is not accurate"
     };
 }
