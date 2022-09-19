@@ -4,13 +4,15 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.net.Uri;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.content.res.AppCompatResources;
+
 public class AppRate {
-    private final static String APP_TITLE = String.valueOf(R.string.app_name);// App Name
     private static final String APP_PNAME = "com.beckytech.english1000commonphrases";// Package Name
 
     private final static int DAYS_UNTIL_PROMPT = 3;//Min number of days
@@ -48,19 +50,26 @@ public class AppRate {
 
     public static void showRateDialog(final Context mContext, final SharedPreferences.Editor editor) {
         final Dialog dialog = new Dialog(mContext);
+        // App Name
+        String APP_TITLE = "English Common Phrase";
         dialog.setTitle("Rate " + APP_TITLE);
 
         LinearLayout ll = new LinearLayout(mContext);
         ll.setOrientation(LinearLayout.VERTICAL);
+        ll.setPadding(10, 10, 10, 10);
+        ll.setBackground(AppCompatResources.getDrawable(mContext, R.drawable.nav_header_bg));
 
         TextView tv = new TextView(mContext);
         tv.setText(String.format("If you enjoy using %s, please take a moment to rate it. Thanks for your support!", APP_TITLE));
         tv.setWidth(240);
+        tv.setTextColor(Color.WHITE);
+        tv.setTextSize(16);
         tv.setPadding(4, 0, 4, 10);
         ll.addView(tv);
 
         Button b1 = new Button(mContext);
         b1.setText(String.format("Rate %s", APP_TITLE));
+        b1.setBackground(AppCompatResources.getDrawable(mContext, R.drawable.bottom_nav_bg));
         b1.setOnClickListener(v -> {
             mContext.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + APP_PNAME)));
             dialog.dismiss();
@@ -70,12 +79,14 @@ public class AppRate {
         Button b2 = new Button(mContext);
         String rmd = "Remind me later";
         b2.setText(rmd);
+        b2.setBackground(AppCompatResources.getDrawable(mContext, R.drawable.bottom_nav_bg));
         b2.setOnClickListener(v -> dialog.dismiss());
         ll.addView(b2);
 
         Button b3 = new Button(mContext);
         String no = "No, thanks";
         b3.setText(no);
+        b3.setBackground(AppCompatResources.getDrawable(mContext, R.drawable.bottom_nav_bg));
         b3.setOnClickListener(v -> {
             if (editor != null) {
                 editor.putBoolean("dontshowagain", true);

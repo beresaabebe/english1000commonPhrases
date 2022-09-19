@@ -184,6 +184,45 @@ public class TitleContent {
             "The time is forty minutes past the hour",
             "The time is forty-five minutes past the hour",
             "The time is fifty minutes past the hour",
-            "When a timepiece is not accurate"
+            "When a timepiece is not accurate",
+
+            "When your moving about may bother someone",
+            "Offering to let someone enter in front of you",
+            "Apologizing to someone you have bothered",
+            "Returning someone’s good wishes",
+            "Agreeing to something—polite",
+            "Explaining that you will attend to someone soon",
+            "Asking for permission to leave a place—polite",
+            "Saying good-bye—polite",
+            "Saying good-bye—informal",
+
+            "Announcing your arrival for an appointment",
+            "Being assertive polite",
+
+            "Sincere apologies",
+            "Offering a very polite apology",
+            "Accepting the blame for something",
+            "Admitting your errors",
+            "Promising never to repeat a particular mistake",
+            "Offering to make amends",
+            "Asking for forgiveness",
+
+            "Simple forgiving",
+            "forgiveness - informal",
+            "Encouraging someone to end a dispute",
+
+            "Saying \"thank you\"—formal",
+            "Saying \"thank you\"—informal",
+
+            "Acknowledging someone’s thanks—formal",
+            "Acknowledging someone’s thanks—informal",
+
+            "Seeing a new baby",
+            "Asking about a new baby",
+            "Congratulating someone for doing a good job",
+            "Wishing someone well",
+            "Expressing sympathy at a funeral or wake",
+
+            "When someone is conceited or vain"
     };
 }

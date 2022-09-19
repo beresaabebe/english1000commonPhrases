@@ -184,6 +184,45 @@ public class SubTitleContent {
             "Telling Time",
             "Telling Time",
             "Telling Time",
-            "Telling Time"
+            "Telling Time",
+
+            "General Pleasantries",
+            "General Pleasantries",
+            "General Pleasantries",
+            "General Pleasantries",
+            "General Pleasantries",
+            "General Pleasantries",
+            "General Pleasantries",
+            "General Pleasantries",
+            "General Pleasantries",
+
+            "business pleasantries",
+            "business pleasantries",
+
+            "apologizing and taking responsibility",
+            "apologizing and taking responsibility",
+            "apologizing and taking responsibility",
+            "apologizing and taking responsibility",
+            "apologizing and taking responsibility",
+            "apologizing and taking responsibility",
+            "apologizing and taking responsibility",
+
+            "forgiving",
+            "forgiving",
+            "forgiving",
+
+            "showing gratitude",
+            "showing gratitude",
+
+            "Acknowledging thanks - formal",
+            "Acknowledging thanks - informal",
+
+            "special occasions",
+            "special occasions",
+            "special occasions",
+            "special occasions",
+            "special occasions",
+
+            "Dealing with Unpleasantness"
     };
 }
