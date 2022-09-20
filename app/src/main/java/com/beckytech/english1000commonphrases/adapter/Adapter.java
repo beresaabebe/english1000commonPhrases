@@ -1,19 +1,24 @@
 package com.beckytech.english1000commonphrases.adapter;
 
+import android.annotation.SuppressLint;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.beckytech.english1000commonphrases.model.Model;
 import com.beckytech.english1000commonphrases.R;
+import com.beckytech.english1000commonphrases.model.Model;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ContentViewHolder> implements Filterable {
@@ -22,6 +27,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ContentViewHolder> imp
     public onClickedContent onClickedContent;
     public List<Model> filterModels;
     public Filter filter;
+    @SuppressLint("NewApi")
+    public Comparator<Model> sort = Comparator.comparing(Model::getTitle);
 
     public Adapter(List<Model> modelList, onClickedContent onClickedContent) {
         this.modelList = modelList;
@@ -75,7 +82,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ContentViewHolder> imp
             @Override
             protected void publishResults(CharSequence constraint, FilterResults results) {
                 modelList = (List<Model>) results.values;
-                notifyDataSetChanged();
             }
         };
 
@@ -89,12 +95,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ContentViewHolder> imp
     public static class ContentViewHolder extends RecyclerView.ViewHolder {
 
         TextView title, subTitle;
+        LinearLayout linear_item_list;
 
         public ContentViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.title);
             title.setSelected(true);
             subTitle = itemView.findViewById(R.id.subTitle);
+            linear_item_list = itemView.findViewById(R.id.linear_item_list);
         }
     }
 }

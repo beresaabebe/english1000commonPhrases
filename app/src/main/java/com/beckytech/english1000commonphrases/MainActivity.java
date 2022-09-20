@@ -40,6 +40,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements Adapter.onClickedContent {
@@ -76,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements Adapter.onClicked
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         getData();
         adapter = new Adapter(list, this);
+        Collections.sort(list, adapter.sort);
         recyclerView.setAdapter(adapter);
     }
 
@@ -83,7 +85,7 @@ public class MainActivity extends AppCompatActivity implements Adapter.onClicked
         list = new ArrayList<>();
         for (int i = 0; i < titleContent.title.length; i++) {
             list.add(new Model(titleContent.title[i].substring(0,1).toUpperCase()+""+titleContent.title[i].substring(1).toLowerCase(),
-                    subTitleContent.subTitle[i].substring(0,1).toUpperCase()+""+subTitleContent.subTitle[i].substring(1),
+                    subTitleContent.subTitle[i].substring(0,1).toUpperCase()+""+subTitleContent.subTitle[i].substring(1).toLowerCase(),
                     contentDetail.content[i],
                     categoryContent.categories[i]));
         }

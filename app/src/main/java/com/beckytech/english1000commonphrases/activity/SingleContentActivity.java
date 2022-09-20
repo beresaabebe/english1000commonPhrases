@@ -8,6 +8,8 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.view.View;
+import android.webkit.WebResourceError;
+import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
@@ -55,7 +57,6 @@ public class SingleContentActivity extends AppCompatActivity {
         textTitle = findViewById(R.id.tv_title_single_content);
         textTitle.setText(title);
 
-        ImageView add_fav = findViewById(R.id.add_fav_single_content_image);
         ImageView copy = findViewById(R.id.copy_image_single_content);
 
         copy.setOnClickListener(v -> copyTheText());
@@ -96,6 +97,12 @@ public class SingleContentActivity extends AppCompatActivity {
                 super.onPageFinished(view, url);
                 progressBar.setVisibility(View.GONE);
                 textTitle.setText(view.getTitle());
+            }
+
+            @Override
+            public void onReceivedError(WebView view, WebResourceRequest request, WebResourceError error) {
+                super.onReceivedError(view, request, error);
+                Toast.makeText(SingleContentActivity.this, "No internet connection!", Toast.LENGTH_SHORT).show();
             }
         });
         webView.getSettings().setJavaScriptEnabled(true);
