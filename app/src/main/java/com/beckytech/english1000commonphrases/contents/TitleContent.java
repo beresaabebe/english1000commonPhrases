@@ -429,6 +429,18 @@ public class TitleContent {
             "Asking for clarification in a college classroom",
             "Asking about classroom examinations",
             "Asking about a classroom assignment",
-            "Asking about grades"
+            "Asking about grades",
+
+            "Meeting Children",
+            "Concerning a child’s growth and development",
+            "Posing questions to children",
+            "Praising a small child",
+            "Scolding a child",
+            "Encouraging a child to be quiet",
+            "Asking a child to stop some behavior",
+            "Asking a child to leave things alone",
+            "Asking a child to leave people alone",
+            "Making sure a child understands",
+            "Concerning a child’s use of good manners",
     };
 }

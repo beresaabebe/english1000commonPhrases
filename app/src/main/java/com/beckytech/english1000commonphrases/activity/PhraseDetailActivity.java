@@ -2,6 +2,7 @@ package com.beckytech.english1000commonphrases.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,7 +12,6 @@ import com.beckytech.english1000commonphrases.R;
 import com.beckytech.english1000commonphrases.adapter.AdapterDetail;
 import com.beckytech.english1000commonphrases.contents.CategoryContent;
 import com.beckytech.english1000commonphrases.contents.ContentDetail;
-import com.beckytech.english1000commonphrases.contents.SubTitleContent;
 import com.beckytech.english1000commonphrases.model.Model;
 import com.beckytech.english1000commonphrases.model.ModelDetail;
 import com.google.android.gms.ads.AdRequest;
@@ -20,6 +20,7 @@ import com.google.android.gms.ads.MobileAds;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class PhraseDetailActivity extends AppCompatActivity {
 
@@ -27,6 +28,7 @@ public class PhraseDetailActivity extends AppCompatActivity {
     private final CategoryContent categoryContent = new CategoryContent();
     private final ContentDetail contentDetail = new ContentDetail();
     private Model model;
+    private TextToSpeech textToSpeech;
 
 
     @Override
@@ -57,6 +59,10 @@ public class PhraseDetailActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapterDetail);
 
         rev_title_detail_phrase.setText(model.getTitle());
+        rev_title_detail_phrase.setOnClickListener(v -> textToSpeech = new TextToSpeech(this, status -> {
+            textToSpeech.setLanguage(Locale.getDefault());
+            textToSpeech.speak(model.getTitle(), TextToSpeech.QUEUE_FLUSH, null, null);
+        }));
     }
 
     private void getData() {
