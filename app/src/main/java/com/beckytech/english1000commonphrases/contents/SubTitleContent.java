@@ -472,6 +472,23 @@ public class SubTitleContent {
             "Restaurants",
             "Restaurants",
             "Restaurants",
-            "Restaurants"
+            "Restaurants",
+
+            "Bars",
+            "Bars",
+            "Bars",
+            "Bars",
+            "Bars",
+            "Bars",
+            "Bars",
+            "Bars",
+            "Bars",
+            "Bars",
+            "Bars",
+            "Bars",
+            "Bars",
+            "Bars",
+            "Bars",
+            "Bars"
     };
 }

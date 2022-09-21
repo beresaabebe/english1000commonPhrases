@@ -472,6 +472,23 @@ public class TitleContent {
             "A waiter or waitress ordering dessert",
             "Asking for the bill in a restaurant",
             "About payment for a meal in a restaurant",
-            "Concerning the payment of a bill in a restaurant"
+            "Concerning the payment of a bill in a restaurant",
+
+            "A bartender asking what you want",
+            "Asking what’s available at a bar",
+            "Requesting a glass or bottle of beer",
+            "Various requests for drinks from a bartender",
+            "Special instructions to a bartender",
+            "Buying drinks with friends",
+            "Charges for drinks at a bar",
+            "Expressions used with friends at a bar asking about drinks",
+            "Expressions about drinking additional drinks",
+            "Asking for a small drink of beverage alcohol",
+            "Encouraging someone to drink",
+            "Asking about the time that a bar closes",
+            "Encouraging someone to finish a drink",
+            "Drinking toasts",
+            "When someone drinks too much",
+            "Stating that someone is drunk"
     };
 }
