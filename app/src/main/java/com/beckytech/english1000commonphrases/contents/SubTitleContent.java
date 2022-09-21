@@ -420,6 +420,15 @@ public class SubTitleContent {
             "Home Life",
             "Home Life",
             "Home Life",
-            "Home Life"
+            "Home Life",
+
+            "Education",
+            "Education",
+            "Education",
+            "Education",
+            "Education",
+            "Education",
+            "Education",
+            "Education"
     };
 }

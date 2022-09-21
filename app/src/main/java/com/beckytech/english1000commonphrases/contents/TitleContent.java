@@ -420,6 +420,15 @@ public class TitleContent {
             "Going to bed and to sleep",
             "Saying good night",
             "Commands for a dog",
-            "Caring for pets"
+            "Caring for pets",
+
+            "Getting ready to study or do homework",
+            "Talking to a child’s teacher",
+            "Returning to school after an absence",
+            "Questioning a college professor",
+            "Asking for clarification in a college classroom",
+            "Asking about classroom examinations",
+            "Asking about a classroom assignment",
+            "Asking about grades"
     };
 }
