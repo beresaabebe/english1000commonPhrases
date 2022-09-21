@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements Adapter.onClicked
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         getData();
         adapter = new Adapter(list, this);
-        Collections.sort(list, adapter.sort);
+//        Collections.sort(list, adapter.sort);
         recyclerView.setAdapter(adapter);
     }
 
