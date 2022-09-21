@@ -378,6 +378,24 @@ public class SubTitleContent {
             "Health and Appearance",
             "Health and Appearance",
             "Health and Appearance",
-            "Health and Appearance"
+            "Health and Appearance",
+
+            "Sickness",
+            "Sickness",
+            "Sickness",
+            "Sickness",
+            "Sickness",
+            "Sickness",
+            "Sickness",
+            "Sickness",
+            "Sickness",
+            "Sickness",
+            "Sickness",
+            "Sickness",
+            "Sickness",
+            "Sickness",
+            "Sickness",
+            "Sickness",
+            "Sickness"
     };
 }

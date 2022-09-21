@@ -378,6 +378,24 @@ public class TitleContent {
             "Observing that someone looks disorderly",
             "When someone looks very bad",
             "Inquiring about someone’s health or well-being",
-            "When someone does not look well"
+            "When someone does not look well",
+
+            "Concerning allergies",
+            "Allergic problems with the nose and breathing",
+            "When someone sneezes",
+            "Allergic problems with the eyes",
+            "Allergic problems with the skin",
+            "Expressing general feelings of illness",
+            "Expressing mild discomfort owing to illness",
+            "When you feel like vomiting",
+            "Describing a pain in the head",
+            "Describing dizziness",
+            "Describing being exhausted or worn out",
+            "Offering care to a sick person",
+            "Concerning catching a disease",
+            "Questions for the hospital patient",
+            "Explaining that your health is improving",
+            "Explaining that you are receiving medical care",
+            "Explaining that you are cured of a health problem"
     };
 }
