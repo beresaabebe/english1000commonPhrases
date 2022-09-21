@@ -396,6 +396,30 @@ public class TitleContent {
             "Questions for the hospital patient",
             "Explaining that your health is improving",
             "Explaining that you are receiving medical care",
-            "Explaining that you are cured of a health problem"
+            "Explaining that you are cured of a health problem",
+
+            "Describing family relationships",
+            "Family solidarity",
+            "Asking about a meal",
+            "Announcing a meal",
+            "Instructions given to children in the kitchen",
+            "Blessing the food",
+            "Second servings",
+            "Instructing children on good table manners",
+            "Doing the dishes",
+            "Asking to leave the dinner table early",
+            "Instructing children to finish eating",
+            "Concerning a radio or stereo",
+            "Concerning furniture or carpeting",
+            "Concerning television",
+            "Changing the television channel",
+            "Managing a television set",
+            "Concerning computers",
+            "Managing a computer",
+            "Taking a nap",
+            "Going to bed and to sleep",
+            "Saying good night",
+            "Commands for a dog",
+            "Caring for pets"
     };
 }
