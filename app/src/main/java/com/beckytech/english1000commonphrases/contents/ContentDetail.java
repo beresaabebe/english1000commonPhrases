@@ -360,6 +360,20 @@ public class ContentDetail {
             "I was scared.",
             "I’m at a loss for words.",
 
+            "I’m sorry, I’m hard of hearing.",
+            "I don’t have an ear for music.",
+            "I can’t hear them; they’re out of earshot.",
+            "My plea fell on deaf ears. (cliché)",
+            "Delicious",
+            "Would you like a taste?",
+            "I'm hungry.",
+            "What's that smell?",
+            "That sends shivers down my spine.",
+            "It was (as) soft as silk.",
+            "I’m as blind as a bat. (cliché)",
+            "I have good eyesight.",
+            "I can’t believe my eyes.",
+
             "Where is the nearest post office?",
             "Can you tell me the way to the Big Hotel?",
             "Are we on the right road for London?",
@@ -4486,6 +4500,91 @@ public class ContentDetail {
             "I don’t know what to say.",
             "What can I say?",
             "What do you want me to say?",
-            "You got me there."
+            "You got me there.",
+
+            "I’m sorry, I’m hearing-impaired.",
+            "He suffered a hearing loss.",
+            "He’s stone deaf. stone = completely",
+            "She’s deaf as a post. (informal)",
+
+            "I’m tone-deaf.",
+            "He’s got an ear for the piano.",
+            "She plays piano by ear.",
+
+            "It was so quiet you could hear a pin drop.",
+            "That noise is deafening.",
+            "That noise assaults the ear. (formal)",
+            "That noise is setting my teeth on edge.",
+            "What a racket! racket = noise",
+            "Are you trying to wake the dead?",
+            "My ears are ringing.",
+
+            "They turned a deaf ear to our plea. (idiomatic)",
+            "There’s none so deaf as those who will not hear. (cliché)",
+            "In one ear and out the other. (cliché)",
+            "To hear tell, the whole situation was awful.",
+            "Boy, did I get an earful. an earful = a long explanation; a scolding",
+            "Prick up your ears! (idiomatic)",
+            "Keep your ears open.",
+            "Hear no evil. (cliché)",
+
+            "That tastes great.",
+            "Tastes great.",
+            "That’s as sweet as honey.",
+            "That’s as sweet as sugar.",
+            "That tastes terrible.",
+            "That tastes like chicken.",
+            "That turns my stomach.",
+            "That’s unfit for human consumption.",
+
+            "Here. Try some.",
+            "Would you like a sip?",
+
+            "I’m famished.",
+            "I’m starved.",
+            "I’m ravenous.",
+            "My mouth is watering.",
+            "That stew is mouthwatering.",
+            "I’m so hungry I could eat a horse. (cliché)",
+            "I could eat a horse. (cliché)",
+
+            "What smells?",
+            "Do you smell something?",
+            "What’s that fragrance?",
+            "What’s that aroma?",
+            "What’s that scent?",
+            "What’s that odor?",
+            "What’s that stench?",
+            "What stinks? (informal)",
+            "Do you smell gas?",
+            "Get a whiff of this!",
+            "Take a whiff of this.",
+            "Sniff this.",
+            "That reeks.",
+            "That smells.",
+            "That smells to high heaven!",
+            "That stinks to high heaven! (informal)",
+            "It stinks on ice. (slang)",
+
+            "It gave me goose bumps.",
+            "It gave me the chills.",
+            "It gave me butterflies in my stomach. (idiomatic)",
+
+            "It was (as) hard as a rock.",
+            "It was (as) hard as stone.",
+            "The fish felt slimy.",
+
+            "I can’t see a thing without my glasses.",
+            "I can’t quite make it out.",
+
+            "I have excellent vision.",
+            "I have 20/20 vision.",
+            "I’ve got a good eye for color.",
+            "I’ve got an eye for composition.",
+
+            "My eyes betray me. (formal)",
+            "Do my eyes deceive me?",
+            "There’s none so blind as those who will not see. (cliché)"
+
     };
 }
