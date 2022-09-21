@@ -489,6 +489,19 @@ public class TitleContent {
             "Encouraging someone to finish a drink",
             "Drinking toasts",
             "When someone drinks too much",
-            "Stating that someone is drunk"
+            "Stating that someone is drunk",
+
+            "Stating that you are hungry",
+            "Asking when a meal will be ready",
+            "Asking what is for dinner",
+            "Stating when food will be ready",
+            "Offering someone a bit of food",
+            "Blessing the food",
+            "Concerning passing food at the table",
+            "Concerning additional servings of food",
+            "Enforcing good table manners",
+            "Cleaning up after a meal",
+            "Excusing oneself from the table",
+            "Encouraging children to eat"
     };
 }
