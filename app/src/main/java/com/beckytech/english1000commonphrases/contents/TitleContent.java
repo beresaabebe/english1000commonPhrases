@@ -502,6 +502,25 @@ public class TitleContent {
             "Enforcing good table manners",
             "Cleaning up after a meal",
             "Excusing oneself from the table",
-            "Encouraging children to eat"
+            "Encouraging children to eat",
+
+            "Asking about store hours",
+            "A salesperson greeting a customer",
+            "A salesperson offering help to a customer",
+            "Questions a salesperson might ask a customer",
+            "Offering merchandise to a customer",
+            "Offering additional help to a customer",
+            "Finding things in a department store",
+            "Shopping for something at a department store",
+            "When you are just looking and not buying",
+            "Choosing merchandise in a store",
+            "Questions a customer might ask in a store",
+            "When a customer wants to try on clothing",
+            "Encouraging remarks a salesperson might make to a customer",
+            "Asking how a purchase will be paid for",
+            "When a salesperson cannot supply exactly what is wanted",
+            "When merchandise is not satisfactory",
+            "Asking about payment plans in a store",
+            "Getting a purchase gift wrapped in a store"
     };
 }

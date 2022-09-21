@@ -502,6 +502,25 @@ public class SubTitleContent {
             "Home cooking",
             "Home cooking",
             "Home cooking",
-            "Home cooking"
+            "Home cooking",
+
+            "Stores and shops",
+            "Stores and shops",
+            "Stores and shops",
+            "Stores and shops",
+            "Stores and shops",
+            "Stores and shops",
+            "Stores and shops",
+            "Stores and shops",
+            "Stores and shops",
+            "Stores and shops",
+            "Stores and shops",
+            "Stores and shops",
+            "Stores and shops",
+            "Stores and shops",
+            "Stores and shops",
+            "Stores and shops",
+            "Stores and shops",
+            "Stores and shops"
     };
 }
