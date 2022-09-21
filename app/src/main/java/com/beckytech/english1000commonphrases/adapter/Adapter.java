@@ -82,6 +82,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ContentViewHolder> imp
             @Override
             protected void publishResults(CharSequence constraint, FilterResults results) {
                 modelList = (List<Model>) results.values;
+                notifyDataSetChanged();
             }
         };
 
