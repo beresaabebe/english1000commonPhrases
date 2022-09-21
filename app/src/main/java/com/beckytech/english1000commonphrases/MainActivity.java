@@ -20,18 +20,25 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.viewpager2.widget.ViewPager2;
 
 import com.beckytech.english1000commonphrases.activity.AboutActivity;
 import com.beckytech.english1000commonphrases.activity.CategoryDetailActivity;
 import com.beckytech.english1000commonphrases.activity.PhraseDetailActivity;
+import com.beckytech.english1000commonphrases.activity.ViewPagerDetailActivity;
 import com.beckytech.english1000commonphrases.adapter.Adapter;
+import com.beckytech.english1000commonphrases.adapter.AdapterViewPager;
 import com.beckytech.english1000commonphrases.contents.CategoryContent;
 import com.beckytech.english1000commonphrases.contents.ContentDetail;
+import com.beckytech.english1000commonphrases.contents.ImageContents;
+import com.beckytech.english1000commonphrases.contents.ImageTagNameContents;
 import com.beckytech.english1000commonphrases.contents.SubTitleContent;
 import com.beckytech.english1000commonphrases.contents.TitleContent;
 import com.beckytech.english1000commonphrases.model.Model;
+import com.beckytech.english1000commonphrases.model.ModelViewPager;
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
@@ -44,7 +51,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements Adapter.onClickedContent {
+public class MainActivity extends AppCompatActivity implements Adapter.onClickedContent, AdapterViewPager.onClickedContent {
     private InterstitialAd mInterstitialAd;
     private DrawerLayout drawerLayout;
     private List<Model> list;
@@ -53,6 +60,9 @@ public class MainActivity extends AppCompatActivity implements Adapter.onClicked
     private final ContentDetail contentDetail = new ContentDetail();
     private final CategoryContent categoryContent = new CategoryContent();
     private Adapter adapter;
+    private List<ModelViewPager> viewPagerList;
+    private final ImageContents imageContents = new ImageContents();
+    private final ImageTagNameContents tagNameContents = new ImageTagNameContents();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +90,19 @@ public class MainActivity extends AppCompatActivity implements Adapter.onClicked
         adapter = new Adapter(list, this);
         Collections.sort(list, adapter.sort);
         recyclerView.setAdapter(adapter);
+
+        ViewPager2 viewPager2 = findViewById(R.id.viewPager_main);
+        getViewPagerData();
+        AdapterViewPager adapterViewPager = new AdapterViewPager(viewPagerList, this);
+        viewPager2.setAdapter(adapterViewPager);
+    }
+
+    private void getViewPagerData() {
+        viewPagerList = new ArrayList<>();
+        for (int i = 0; i < imageContents.images.length; i++) {
+            viewPagerList.add(new ModelViewPager(tagNameContents.tagName[i].substring(0,1).toUpperCase()+""+
+                    tagNameContents.tagName[i].substring(1), imageContents.images[i]));
+        }
     }
 
     private void getData() {
@@ -313,6 +336,13 @@ public class MainActivity extends AppCompatActivity implements Adapter.onClicked
                 startActivity(new Intent(MainActivity.this, PhraseDetailActivity.class).putExtra("data", model));
             }
         }
-        startActivity(new Intent(MainActivity.this, PhraseDetailActivity.class).putExtra("data", model));
+        else {
+            startActivity(new Intent(MainActivity.this, PhraseDetailActivity.class).putExtra("data", model));
+        }
+    }
+
+    @Override
+    public void itemClicked(ModelViewPager model) {
+        startActivity(new Intent(MainActivity.this, ViewPagerDetailActivity.class).putExtra("data", model));
     }
 }

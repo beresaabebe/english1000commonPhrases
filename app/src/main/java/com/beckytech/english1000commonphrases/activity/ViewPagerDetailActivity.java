@@ -1,13 +1,13 @@
 package com.beckytech.english1000commonphrases.activity;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.beckytech.english1000commonphrases.R;
 import com.beckytech.english1000commonphrases.adapter.Adapter;
@@ -16,6 +16,7 @@ import com.beckytech.english1000commonphrases.contents.ContentDetail;
 import com.beckytech.english1000commonphrases.contents.SubTitleContent;
 import com.beckytech.english1000commonphrases.contents.TitleContent;
 import com.beckytech.english1000commonphrases.model.Model;
+import com.beckytech.english1000commonphrases.model.ModelViewPager;
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.FullScreenContentCallback;
@@ -26,39 +27,37 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CategoryDetailActivity extends AppCompatActivity implements Adapter.onClickedContent {
+public class ViewPagerDetailActivity extends AppCompatActivity implements Adapter.onClickedContent {
 
+    private ModelViewPager modelViewPager;
     private List<Model> modelList;
     private final TitleContent titleContent = new TitleContent();
     private final SubTitleContent subTitleContent = new SubTitleContent();
     private final ContentDetail contentDetail = new ContentDetail();
     private final CategoryContent categoryContent = new CategoryContent();
     private InterstitialAd mInterstitialAd;
-    private String data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_category_detail);
+        setContentView(R.layout.activity_view_pager_detail);
 
+        findViewById(R.id.back_button_view_pager_detail).setOnClickListener(v -> onBackPressed());
+
+        RecyclerView recyclerView = findViewById(R.id.recyclerView_view_pager_detail);
         Intent intent = getIntent();
-        data = intent.getStringExtra("data");
-
-        findViewById(R.id.back_button_category_detail).setOnClickListener(v -> onBackPressed());
-        TextView tv_title_category_detail = findViewById(R.id.tv_title_category_detail);
-        tv_title_category_detail.setText(String.format("Useful Phrases at %s", data.substring(0,1).toUpperCase()+
-                data.substring(1)));
-        RecyclerView recyclerView = findViewById(R.id.recyclerView_category_detail);
+        modelViewPager = (ModelViewPager) intent.getSerializableExtra("data");
         getData();
         Adapter adapter = new Adapter(modelList, this);
-
+        TextView title = findViewById(R.id.tv_title_view_pager_detail);
+        title.setText(String.format("%s%s", modelViewPager.getTag().substring(0, 1).toUpperCase(), modelViewPager.getTag().substring(1)));
         recyclerView.setAdapter(adapter);
     }
 
     private void getData() {
         modelList = new ArrayList<>();
         for (int i = 0; i < titleContent.title.length; i++) {
-            if (subTitleContent.subTitle[i].toLowerCase().equals(data)) {
+            if (subTitleContent.subTitle[i].toLowerCase().contains(modelViewPager.getTag().toLowerCase())) {
                 modelList.add(new Model(titleContent.title[i].substring(0, 1).toUpperCase() + "" + titleContent.title[i].substring(1).toLowerCase(),
                         subTitleContent.subTitle[i].substring(0, 1).toUpperCase() + "" + subTitleContent.subTitle[i].substring(1).toLowerCase(),
                         contentDetail.content[i],
@@ -72,12 +71,12 @@ public class CategoryDetailActivity extends AppCompatActivity implements Adapter
         int rand = (int) (Math.random() * 1000);
         if (rand % 2 == 0) {
             if (mInterstitialAd != null) {
-                mInterstitialAd.show(CategoryDetailActivity.this);
+                mInterstitialAd.show(ViewPagerDetailActivity.this);
                 mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
                     @Override
                     public void onAdDismissedFullScreenContent() {
                         super.onAdDismissedFullScreenContent();
-                        startActivity(new Intent(CategoryDetailActivity.this, PhraseDetailActivity.class).putExtra("data", model));
+                        startActivity(new Intent(ViewPagerDetailActivity.this, PhraseDetailActivity.class).putExtra("data", model));
                         mInterstitialAd = null;
                         setAds();
                     }
@@ -98,11 +97,11 @@ public class CategoryDetailActivity extends AppCompatActivity implements Adapter
                     }
                 });
             } else {
-                startActivity(new Intent(CategoryDetailActivity.this, PhraseDetailActivity.class).putExtra("data", model));
+                startActivity(new Intent(ViewPagerDetailActivity.this, PhraseDetailActivity.class).putExtra("data", model));
             }
         }
         else {
-            startActivity(new Intent(CategoryDetailActivity.this, PhraseDetailActivity.class).putExtra("data", model));
+            startActivity(new Intent(ViewPagerDetailActivity.this, PhraseDetailActivity.class).putExtra("data", model));
         }
     }
 
@@ -122,5 +121,4 @@ public class CategoryDetailActivity extends AppCompatActivity implements Adapter
                     }
                 });
     }
-
 }
