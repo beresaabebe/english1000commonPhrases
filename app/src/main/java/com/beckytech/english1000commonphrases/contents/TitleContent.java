@@ -521,6 +521,19 @@ public class TitleContent {
             "When a salesperson cannot supply exactly what is wanted",
             "When merchandise is not satisfactory",
             "Asking about payment plans in a store",
-            "Getting a purchase gift wrapped in a store"
+            "Getting a purchase gift wrapped in a store",
+
+            "Receiving communications on your mobile device",
+            "Answering the telephone—residential",
+            "Answering the telephone—business",
+            "Asking whom a telephone caller wants to talk to",
+            "Screening someone’s telephone calls",
+            "Connecting or transferring a telephone caller",
+            "Putting a telephone caller on hold",
+            "Interrupting a telephone call with other business",
+            "Taking a call off hold",
+            "Offering to take a message from a telephone caller",
+            "Offering to help a telephone caller",
+            "Bringing a telephone call to an end"
     };
 }

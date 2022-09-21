@@ -521,6 +521,19 @@ public class SubTitleContent {
             "Stores and shops",
             "Stores and shops",
             "Stores and shops",
-            "Stores and shops"
+            "Stores and shops",
+
+            "Answering the telephone",
+            "Answering the telephone",
+            "Answering the telephone",
+            "Answering the telephone",
+            "Answering the telephone",
+            "Answering the telephone",
+            "Answering the telephone",
+            "Answering the telephone",
+            "Answering the telephone",
+            "Answering the telephone",
+            "Answering the telephone",
+            "Answering the telephone"
     };
 }

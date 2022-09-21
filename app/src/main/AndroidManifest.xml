@@ -18,10 +18,13 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".activity.SingleContentActivity"
-            android:hardwareAccelerated="true"
-            android:screenOrientation="sensor"
+            android:name=".activity.CategoryDetailActivity"
             android:exported="false" />
+        <activity
+            android:name=".activity.SingleContentActivity"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="sensor" />
         <activity
             android:name=".activity.PhraseDetailActivity"
             android:exported="false"

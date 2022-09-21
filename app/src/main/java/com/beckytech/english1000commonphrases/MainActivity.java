@@ -22,6 +22,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.beckytech.english1000commonphrases.activity.AboutActivity;
+import com.beckytech.english1000commonphrases.activity.CategoryDetailActivity;
 import com.beckytech.english1000commonphrases.activity.PhraseDetailActivity;
 import com.beckytech.english1000commonphrases.adapter.Adapter;
 import com.beckytech.english1000commonphrases.contents.CategoryContent;
@@ -77,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements Adapter.onClicked
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         getData();
         adapter = new Adapter(list, this);
-//        Collections.sort(list, adapter.sort);
+        Collections.sort(list, adapter.sort);
         recyclerView.setAdapter(adapter);
     }
 
@@ -187,6 +188,7 @@ public class MainActivity extends AppCompatActivity implements Adapter.onClicked
                 Toast.makeText(this, "No update available!", Toast.LENGTH_SHORT).show();
             }
         }
+
         if (item.getItemId() == R.id.action_exit) {
             MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
             builder.setTitle("Cufu")
@@ -198,6 +200,13 @@ public class MainActivity extends AppCompatActivity implements Adapter.onClicked
                     .setNegativeButton("Lakki", (dialog, which) -> dialog.dismiss())
                     .setBackground(getResources().getDrawable(R.drawable.nav_header_bg, null))
                     .show();
+        }
+
+        if (item.getItemId() == R.id.action_at_bar) {
+            startActivity(new Intent(MainActivity.this, CategoryDetailActivity.class).putExtra("data","bars"));
+            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                drawerLayout.closeDrawer(GravityCompat.START);
+            }
         }
     }
 
@@ -245,7 +254,7 @@ public class MainActivity extends AppCompatActivity implements Adapter.onClicked
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu, menu);
+        getMenuInflater().inflate(R.menu.upper_menu, menu);
         MenuItem item = menu.findItem(R.id.actions_search);
         SearchView searchView = (SearchView) item.getActionView();
 
@@ -272,6 +281,38 @@ public class MainActivity extends AppCompatActivity implements Adapter.onClicked
 
     @Override
     public void itemClicked(Model model) {
+        int rand = (int) (Math.random() * 1000);
+        if (rand % 2 == 0) {
+            if (mInterstitialAd != null) {
+                mInterstitialAd.show(MainActivity.this);
+                mInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                    @Override
+                    public void onAdDismissedFullScreenContent() {
+                        super.onAdDismissedFullScreenContent();
+                        startActivity(new Intent(MainActivity.this, PhraseDetailActivity.class).putExtra("data", model));
+                        mInterstitialAd = null;
+                        setAds();
+                    }
+
+                    @Override
+                    public void onAdFailedToShowFullScreenContent(@NonNull AdError adError) {
+                        // Called when fullscreen content failed to show.
+                        Log.d("TAG", "The ad failed to show.");
+                    }
+
+                    @Override
+                    public void onAdShowedFullScreenContent() {
+                        // Called when fullscreen content is shown.
+                        // Make sure to set your reference to null so you don't
+                        // show it a second time.
+                        mInterstitialAd = null;
+                        Log.d("TAG", "The ad was shown.");
+                    }
+                });
+            } else {
+                startActivity(new Intent(MainActivity.this, PhraseDetailActivity.class).putExtra("data", model));
+            }
+        }
         startActivity(new Intent(MainActivity.this, PhraseDetailActivity.class).putExtra("data", model));
     }
 }

@@ -2,13 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/action_at_bar"
-        android:icon="@drawable/ic_baseline_sports_bar_24"
-        android:title="@string/communication_at_bar"/>
+    <item android:id="@+id/actions_search"
+        android:title="@string/search"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_baseline_search_24"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"/>
 
     <item
         android:id="@+id/action_about_us"
         android:icon="@drawable/ic_baseline_person_24"
+        android:iconTint="@color/white"
         android:title="@string/about_us"
         app:showAsAction="never" />
 
