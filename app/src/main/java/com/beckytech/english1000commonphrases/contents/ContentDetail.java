@@ -374,6 +374,12 @@ public class ContentDetail {
             "I have good eyesight.",
             "I can’t believe my eyes.",
 
+            "His doctor gave him a clean bill of health.\n a clean bill of health = a good report on one’s health",
+            "You look tired.",
+            "You could stop a truck. (informal)",
+            "Are you ok?",
+            "You don’t look well.",
+
             "Where is the nearest post office?",
             "Can you tell me the way to the Big Hotel?",
             "Are we on the right road for London?",
@@ -4584,7 +4590,55 @@ public class ContentDetail {
 
             "My eyes betray me. (formal)",
             "Do my eyes deceive me?",
-            "There’s none so blind as those who will not see. (cliché)"
+            "There’s none so blind as those who will not see. (cliché)",
 
+            "He’s the picture of health.",
+            "He’s in the pink.",
+            "He looks great.",
+            "He’s looking good.",
+            "He’s in top form.",
+            "He’s at the top of his form.",
+            "I couldn’t be better.",
+            "I feel like a million dollars.",
+            "I feel like a million bucks.",
+            "She looks like a million dollars.",
+            "She looks like a million bucks.",
+            "He’s bright-eyed and bushy-tailed. (idiomatic)",
+            "I’m sound as a dollar. (cliché)",
+            "I’m fresh as a daisy. (cliché)",
+            "She’s healthy as a horse. (cliché)",
+            "She’s fit as a fiddle. (cliché)",
+
+            "You look like you need some sleep.",
+            "You look dreadful.",
+            "You look terrible.",
+            "You look like hell. (mildly vulgar)",
+            "You look a sight.",
+            "You’re a sight.",
+            "Look what the cat dragged in. (informal)",
+            "You look like something the cat dragged in. (informal)",
+            "You look like you’ve been to hell and back. (informal)",
+            "You look like you’ve been through a war.",
+            "You look like you’ve gone through the wringer.",
+
+            "You could stop a clock. (informal)",
+            "That face could stop a clock. (informal) ",
+            "Are you having a bad hair day? (informal)",
+            "You’re as ugly as sin. (informal)",
+
+            "Are you feeling OK?",
+            "Are you all right?",
+            "Do you feel all right?",
+
+            "You don’t look too good. (informal)",
+            "You don’t look so good. (informal)",
+            "You look like death.",
+            "You look like death warmed over.",
+            "You look green around the gills.",
+            "You look a little peaked.",
+            "You look flushed.",
+            "You look pale.",
+            "You’re pale.",
+            "You’re white as a ghost."
     };
 }

@@ -42,12 +42,39 @@
 
     </RelativeLayout>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/title_rl"
+        android:layout_below="@id/toolbar"
+        android:background="@drawable/title_bg"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/app_name"
+            android:id="@+id/rev_title_detail_phrase"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="23sp"
+            style="@style/TextAppearance.AppCompat.Large"
+            android:fontFamily="serif"/>
+
+    </RelativeLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView_detail"
         android:layout_width="match_parent"
         android:background="@drawable/bg_onclick"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbar"
+        android:layout_below="@id/title_rl"
         android:paddingStart="5dp"
         tools:listitem="@layout/detail_item_list"
         android:paddingEnd="5dp"

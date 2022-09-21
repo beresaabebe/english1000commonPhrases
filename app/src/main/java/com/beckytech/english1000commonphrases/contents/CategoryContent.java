@@ -374,6 +374,12 @@ public class CategoryContent {
             "Concerning good vision",
             "Concerning vision and belief",
 
+            "When someone is in good health",
+            "Observing that someone looks disorderly",
+            "When someone looks very bad",
+            "Inquiring about someone’s health or well-being",
+            "When someone does not look well",
+
             "ask",
             "ask",
             "ask",
@@ -4584,6 +4590,55 @@ public class CategoryContent {
 
             "Concerning vision and belief",
             "Concerning vision and belief",
-            "Concerning vision and belief"
+            "Concerning vision and belief",
+
+            "When someone is in good health",
+            "When someone is in good health",
+            "When someone is in good health",
+            "When someone is in good health",
+            "When someone is in good health",
+            "When someone is in good health",
+            "When someone is in good health",
+            "When someone is in good health",
+            "When someone is in good health",
+            "When someone is in good health",
+            "When someone is in good health",
+            "When someone is in good health",
+            "When someone is in good health",
+            "When someone is in good health",
+            "When someone is in good health",
+            "When someone is in good health",
+
+            "Observing that someone looks disorderly",
+            "Observing that someone looks disorderly",
+            "Observing that someone looks disorderly",
+            "Observing that someone looks disorderly",
+            "Observing that someone looks disorderly",
+            "Observing that someone looks disorderly",
+            "Observing that someone looks disorderly",
+            "Observing that someone looks disorderly",
+            "Observing that someone looks disorderly",
+            "Observing that someone looks disorderly",
+            "Observing that someone looks disorderly",
+
+            "When someone looks very bad",
+            "When someone looks very bad",
+            "When someone looks very bad",
+            "When someone looks very bad",
+
+            "Inquiring about someone’s health or well-being",
+            "Inquiring about someone’s health or well-being",
+            "Inquiring about someone’s health or well-being",
+
+            "When someone does not look well",
+            "When someone does not look well",
+            "When someone does not look well",
+            "When someone does not look well",
+            "When someone does not look well",
+            "When someone does not look well",
+            "When someone does not look well",
+            "When someone does not look well",
+            "When someone does not look well",
+            "When someone does not look well"
     };
 }

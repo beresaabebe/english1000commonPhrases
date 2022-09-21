@@ -44,15 +44,19 @@ public class PhraseDetailActivity extends AppCompatActivity {
         findViewById(R.id.back_button).setOnClickListener(v -> onBackPressed());
         RecyclerView recyclerView = findViewById(R.id.recyclerView_detail);
 
+        TextView rev_title_detail_phrase = findViewById(R.id.rev_title_detail_phrase);
+
         Intent intent = getIntent();
         model = (Model) intent.getSerializableExtra("data");
         modelDetails = new ArrayList<>();
         TextView textView = findViewById(R.id.title_detail);
-        textView.setText(model.getTitle());
+        textView.setText(model.getSubTitle());
         textView.setSelected(true);
         getData();
         AdapterDetail adapterDetail = new AdapterDetail(this, modelDetails);
         recyclerView.setAdapter(adapterDetail);
+
+        rev_title_detail_phrase.setText(model.getTitle());
     }
 
     private void getData() {

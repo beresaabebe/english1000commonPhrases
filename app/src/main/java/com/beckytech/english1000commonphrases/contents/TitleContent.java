@@ -372,6 +372,12 @@ public class TitleContent {
             "The sense of touch",
             "Difficulties with seeing",
             "Concerning good vision",
-            "Concerning vision and belief"
+            "Concerning vision and belief",
+
+            "When someone is in good health",
+            "Observing that someone looks disorderly",
+            "When someone looks very bad",
+            "Inquiring about someone’s health or well-being",
+            "When someone does not look well"
     };
 }

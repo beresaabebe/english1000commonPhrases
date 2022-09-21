@@ -373,5 +373,11 @@ public class SubTitleContent {
             "The Senses",
             "The Senses",
             "The Senses",
+
+            "Health and Appearance",
+            "Health and Appearance",
+            "Health and Appearance",
+            "Health and Appearance",
+            "Health and Appearance"
     };
 }
