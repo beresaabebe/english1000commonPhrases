@@ -9,6 +9,8 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -38,7 +40,6 @@ import com.beckytech.english1000commonphrases.model.Model;
 import com.beckytech.english1000commonphrases.model.ModelViewPager;
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
@@ -74,6 +75,10 @@ public class MainActivity extends AppCompatActivity implements Adapter.onClicked
         MobileAds.initialize(this, initializationStatus -> {
         });
 
+        ScrollView scrollView = findViewById(R.id.scrollView);
+        scrollView.setSmoothScrollingEnabled(true);
+        scrollView.fullScroll(View.FOCUS_DOWN);
+
         drawerLayout = findViewById(R.id.drawer_layout);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -94,6 +99,7 @@ public class MainActivity extends AppCompatActivity implements Adapter.onClicked
         ViewPager2 viewPager2 = findViewById(R.id.viewPager_main);
         getViewPagerData();
         AdapterViewPager adapterViewPager = new AdapterViewPager(viewPagerList, this);
+        Collections.sort(viewPagerList, adapterViewPager.sort);
         viewPager2.setAdapter(adapterViewPager);
     }
 

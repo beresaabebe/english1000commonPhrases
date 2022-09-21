@@ -13,6 +13,13 @@ public class ImageTagNameContents {
             "restaurant",
             "sense",
             "Stores and shops",
-            "sickness"
+            "sickness",
+            "agreeing",
+            "complex matters",
+            "disagreeing",
+            "Good bye",
+            "Start the conversation",
+            "Dealing with Unpleasantness",
+            "Visits"
     };
 }

@@ -1,5 +1,6 @@
 package com.beckytech.english1000commonphrases.adapter;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,12 +14,15 @@ import com.beckytech.english1000commonphrases.R;
 import com.beckytech.english1000commonphrases.model.Model;
 import com.beckytech.english1000commonphrases.model.ModelViewPager;
 
+import java.util.Comparator;
 import java.util.List;
 
 public class AdapterViewPager extends RecyclerView.Adapter<AdapterViewPager.ViewPageHolder> {
 
     private final List<ModelViewPager> viewPagerList;
     public onClickedContent onClickedContent;
+    @SuppressLint("NewApi")
+    public Comparator<ModelViewPager> sort = Comparator.comparing(ModelViewPager::getTag);
 
     public AdapterViewPager(List<ModelViewPager> viewPagerList, onClickedContent onClickedContent) {
         this.viewPagerList = viewPagerList;

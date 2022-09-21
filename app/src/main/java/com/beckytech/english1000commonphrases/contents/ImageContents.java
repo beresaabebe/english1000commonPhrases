@@ -15,6 +15,13 @@ public class ImageContents {
             R.drawable.restaurant,
             R.drawable.sense,
             R.drawable.shopping,
-            R.drawable.sickness
+            R.drawable.sickness,
+            R.drawable.agreeing,
+            R.drawable.complex,
+            R.drawable.disagreeing,
+            R.drawable.good_bye,
+            R.drawable.start_conversation,
+            R.drawable.unpleasant,
+            R.drawable.visits
     };
 }

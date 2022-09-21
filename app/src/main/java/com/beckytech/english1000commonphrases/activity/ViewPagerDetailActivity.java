@@ -50,7 +50,7 @@ public class ViewPagerDetailActivity extends AppCompatActivity implements Adapte
         getData();
         Adapter adapter = new Adapter(modelList, this);
         TextView title = findViewById(R.id.tv_title_view_pager_detail);
-        title.setText(String.format("%s%s", modelViewPager.getTag().substring(0, 1).toUpperCase(), modelViewPager.getTag().substring(1)));
+        title.setText(String.format("Useful Phrases at %s%s", modelViewPager.getTag().substring(0, 1).toUpperCase(), modelViewPager.getTag().substring(1)));
         recyclerView.setAdapter(adapter);
     }
 
