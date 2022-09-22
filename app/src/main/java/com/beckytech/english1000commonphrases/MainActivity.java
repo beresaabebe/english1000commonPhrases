@@ -249,13 +249,13 @@ public class MainActivity extends AppCompatActivity implements Adapter.onClicked
 
         if (item.getItemId() == R.id.action_exit) {
             MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(this);
-            builder.setTitle("Cufu")
-                    .setMessage("Cufu barbaadu?")
-                    .setPositiveButton("Eyyeen", (dialog, which) -> {
+            builder.setTitle("Close")
+                    .setMessage("Do you want close?")
+                    .setPositiveButton("Yes", (dialog, which) -> {
                         System.exit(0);
                         finish();
                     })
-                    .setNegativeButton("Lakki", (dialog, which) -> dialog.dismiss())
+                    .setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss())
                     .setBackground(getResources().getDrawable(R.drawable.nav_header_bg, null))
                     .show();
         }

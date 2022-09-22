@@ -19,36 +19,37 @@
         tools:targetApi="31">
         <activity
             android:name=".activity.DifferentCategoriesActivity"
+            android:hardwareAccelerated="true"
             android:exported="false" />
         <activity
             android:name=".activity.ViewPagerDetailActivity"
             android:exported="false"
             android:hardwareAccelerated="true"
-            android:screenOrientation="sensor" />
+            android:screenOrientation="user" />
         <activity
             android:name=".activity.SingleContentActivity"
             android:exported="false"
             android:hardwareAccelerated="true"
-            android:screenOrientation="sensor" />
+            android:screenOrientation="user" />
         <activity
             android:name=".activity.PhraseDetailActivity"
             android:exported="false"
-            android:screenOrientation="sensor" />
+            android:screenOrientation="user" />
         <activity
             android:name=".activity.AboutActivity"
             android:exported="false"
             android:hardwareAccelerated="true"
-            android:screenOrientation="sensor" />
+            android:screenOrientation="user" />
         <activity
             android:name=".MainActivity"
             android:exported="false"
             android:hardwareAccelerated="true"
-            android:screenOrientation="sensor" />
+            android:screenOrientation="user" />
         <activity
             android:name=".activity.SplashActivity"
             android:exported="true"
             android:hardwareAccelerated="true"
-            android:screenOrientation="sensor"
+            android:screenOrientation="user"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -58,7 +59,7 @@
         </activity> <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713" />
+            android:value="ca-app-pub-8504401574247581~7866871098" />
     </application>
 
 </manifest>

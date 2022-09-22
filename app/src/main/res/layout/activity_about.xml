@@ -61,7 +61,7 @@
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="@string/app_name"
                 android:scaleType="centerCrop"
-                android:src="@drawable/ic_launcher_background" />
+                android:src="@mipmap/ic_launcher_round" />
 
             <com.google.android.material.divider.MaterialDivider
                 android:layout_width="match_parent"

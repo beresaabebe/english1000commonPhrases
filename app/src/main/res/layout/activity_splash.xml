@@ -3,6 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/images_start"
+    android:background="@drawable/splash"
     tools:context=".activity.SplashActivity"
     android:contentDescription="@string/app_name" />

@@ -17,10 +17,10 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:background="@color/white"
+            android:background="#11ACC6"
             android:contentDescription="@string/app_name"
             android:scaleType="fitXY"
-            android:src="@drawable/ic_launcher_background" />
+            android:src="@mipmap/ic_launcher_foreground" />
 
     </androidx.cardview.widget.CardView>
 
