@@ -20,6 +20,7 @@ public class ImageTagNameContents {
             "Good bye",
             "Start the conversation",
             "Dealing with Unpleasantness",
-            "Visits"
+            "Visits",
+            "Bars"
     };
 }

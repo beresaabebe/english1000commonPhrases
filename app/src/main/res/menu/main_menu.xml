@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <item android:id="@+id/action_at_bar"
-        android:icon="@drawable/ic_baseline_sports_bar_24"
-        android:title="@string/communication_at_bar"/>
-
     <item
         android:id="@+id/action_about_us"
         android:icon="@drawable/ic_baseline_person_24"

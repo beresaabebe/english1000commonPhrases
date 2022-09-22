@@ -56,8 +56,9 @@ public class ViewPagerDetailActivity extends AppCompatActivity implements Adapte
 
     private void getData() {
         modelList = new ArrayList<>();
+        String data = modelViewPager.getTag().toLowerCase();
         for (int i = 0; i < titleContent.title.length; i++) {
-            if (subTitleContent.subTitle[i].toLowerCase().contains(modelViewPager.getTag().toLowerCase())) {
+            if (subTitleContent.subTitle[i].toLowerCase().equals(data)) {
                 modelList.add(new Model(titleContent.title[i].substring(0, 1).toUpperCase() + "" + titleContent.title[i].substring(1).toLowerCase(),
                         subTitleContent.subTitle[i].substring(0, 1).toUpperCase() + "" + subTitleContent.subTitle[i].substring(1).toLowerCase(),
                         contentDetail.content[i],

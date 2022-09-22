@@ -1,5 +1,6 @@
 package com.beckytech.english1000commonphrases.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.speech.tts.TextToSpeech;
@@ -16,6 +17,7 @@ import com.beckytech.english1000commonphrases.activity.SingleContentActivity;
 import com.beckytech.english1000commonphrases.model.ModelDetail;
 import com.beckytech.english1000commonphrases.R;
 
+import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 
@@ -24,6 +26,8 @@ public class AdapterDetail extends RecyclerView.Adapter<AdapterDetail.DetailView
     private final List<ModelDetail> modelDetails;
     private final Context context;
     private TextToSpeech textToSpeech;
+    @SuppressLint("NewApi")
+    public Comparator<ModelDetail> sort = Comparator.comparing(ModelDetail::getTextOriginal);
 
     public AdapterDetail(Context context, List<ModelDetail> modelDetails) {
         this.modelDetails = modelDetails;

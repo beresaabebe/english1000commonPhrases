@@ -22,6 +22,7 @@ public class ImageContents {
             R.drawable.good_bye,
             R.drawable.start_conversation,
             R.drawable.unpleasant,
-            R.drawable.visits
+            R.drawable.visits,
+            R.drawable.bars
     };
 }

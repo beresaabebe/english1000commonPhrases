@@ -25,7 +25,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.beckytech.english1000commonphrases.activity.AboutActivity;
-import com.beckytech.english1000commonphrases.activity.CategoryDetailActivity;
+import com.beckytech.english1000commonphrases.activity.DifferentCategoriesActivity;
 import com.beckytech.english1000commonphrases.activity.PhraseDetailActivity;
 import com.beckytech.english1000commonphrases.activity.ViewPagerDetailActivity;
 import com.beckytech.english1000commonphrases.adapter.Adapter;
@@ -34,6 +34,8 @@ import com.beckytech.english1000commonphrases.contents.CategoryContent;
 import com.beckytech.english1000commonphrases.contents.ContentDetail;
 import com.beckytech.english1000commonphrases.contents.ImageContents;
 import com.beckytech.english1000commonphrases.contents.ImageTagNameContents;
+import com.beckytech.english1000commonphrases.contents.OtherCatContent;
+import com.beckytech.english1000commonphrases.contents.OtherCatImage;
 import com.beckytech.english1000commonphrases.contents.SubTitleContent;
 import com.beckytech.english1000commonphrases.contents.TitleContent;
 import com.beckytech.english1000commonphrases.model.Model;
@@ -52,7 +54,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements Adapter.onClickedContent, AdapterViewPager.onClickedContent {
+public class MainActivity extends AppCompatActivity implements Adapter.onClickedContent, AdapterViewPager.onClickedContent, ViewPager2.PageTransformer {
     private InterstitialAd mInterstitialAd;
     private DrawerLayout drawerLayout;
     private List<Model> list;
@@ -64,6 +66,11 @@ public class MainActivity extends AppCompatActivity implements Adapter.onClicked
     private List<ModelViewPager> viewPagerList;
     private final ImageContents imageContents = new ImageContents();
     private final ImageTagNameContents tagNameContents = new ImageTagNameContents();
+    private static final float MIN_SCALE = 0.85f;
+    private static final float MIN_ALPHA = 0.5f;
+    private final OtherCatContent otherCatContent = new OtherCatContent();
+    private final OtherCatImage otherCatImage = new OtherCatImage();
+    private List<ModelViewPager> secondaryViewPagerList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,10 +104,32 @@ public class MainActivity extends AppCompatActivity implements Adapter.onClicked
         recyclerView.setAdapter(adapter);
 
         ViewPager2 viewPager2 = findViewById(R.id.viewPager_main);
+        viewPager2.setPageTransformer(this);
         getViewPagerData();
         AdapterViewPager adapterViewPager = new AdapterViewPager(viewPagerList, this);
         Collections.sort(viewPagerList, adapterViewPager.sort);
         viewPager2.setAdapter(adapterViewPager);
+
+        ViewPager2 view_pager_other_cat_main = findViewById(R.id.view_pager_other_cat_main);
+        getSecondaryViewPagerData();
+        AdapterViewPager secondaryAdapterViewPager = new AdapterViewPager(secondaryViewPagerList, model -> startActivity(new Intent(this, DifferentCategoriesActivity.class).putExtra("data", model)));
+        Collections.sort(secondaryViewPagerList, adapterViewPager.sort);
+        view_pager_other_cat_main.setAdapter(secondaryAdapterViewPager);
+
+    }
+
+    private void getSecondaryViewPagerData() {
+        secondaryViewPagerList = new ArrayList<>();
+        for (int i = 0; i < otherCatImage.otherImages.length; i++) {
+
+            String receivedValue = otherCatContent.otherCatContent[i].toLowerCase();
+            StringBuilder stringBuilder = new StringBuilder(receivedValue);
+            stringBuilder = stringBuilder.deleteCharAt(receivedValue.length() - 1);
+            stringBuilder = stringBuilder.deleteCharAt(0);
+
+            secondaryViewPagerList.add(new ModelViewPager(stringBuilder.substring(0,1).toUpperCase()+""+
+                    stringBuilder.substring(1).toLowerCase(),otherCatImage.otherImages[i]));
+        }
     }
 
     private void getViewPagerData() {
@@ -230,13 +259,6 @@ public class MainActivity extends AppCompatActivity implements Adapter.onClicked
                     .setBackground(getResources().getDrawable(R.drawable.nav_header_bg, null))
                     .show();
         }
-
-        if (item.getItemId() == R.id.action_at_bar) {
-            startActivity(new Intent(MainActivity.this, CategoryDetailActivity.class).putExtra("data","bars"));
-            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-                drawerLayout.closeDrawer(GravityCompat.START);
-            }
-        }
     }
 
     @Override
@@ -350,5 +372,41 @@ public class MainActivity extends AppCompatActivity implements Adapter.onClicked
     @Override
     public void itemClicked(ModelViewPager model) {
         startActivity(new Intent(MainActivity.this, ViewPagerDetailActivity.class).putExtra("data", model));
+    }
+
+    @Override
+    public void transformPage(@NonNull View page, float position) {
+        int pageWidth = page.getWidth();
+        int pageHeight = page.getHeight();
+
+        if ( position < -1 ) { // [ -Infinity,-1 )
+            // This page is way off-screen to the left.
+            page.setAlpha( 0 );
+        }
+        else if ( position <= 1 ) { // [ -1,1 ]
+            // Modify the default slide transition to shrink the page as well
+            float scaleFactor = Math.max( MIN_SCALE, 1 - Math.abs( position ) );
+            float vertMargin = pageHeight * ( 1 - scaleFactor ) / 2;
+            float horzMargin = pageWidth * ( 1 - scaleFactor ) / 2;
+            if ( position < 0 ) {
+                page.setTranslationX( horzMargin - vertMargin / 2 );
+            } else {
+                page.setTranslationX( -horzMargin + vertMargin / 2 );
+            }
+
+            // Scale the page down ( between MIN_SCALE and 1 )
+            page.setScaleX( scaleFactor );
+            page.setScaleY( scaleFactor );
+
+            // Fade the page relative to its size.
+            page.setAlpha( MIN_ALPHA +
+                    ( scaleFactor - MIN_SCALE ) /
+                            ( 1 - MIN_SCALE ) * ( 1 - MIN_ALPHA ));
+
+        } else { // ( 1,+Infinity ]
+            // This page is way off-screen to the right.
+            page.setAlpha( 0 );
+        }
+
     }
 }

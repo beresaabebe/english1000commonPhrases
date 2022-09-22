@@ -18,15 +18,13 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".activity.ViewPagerDetailActivity"
-            android:hardwareAccelerated="true"
-            android:screenOrientation="sensor"
+            android:name=".activity.DifferentCategoriesActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.CategoryDetailActivity"
+            android:name=".activity.ViewPagerDetailActivity"
+            android:exported="false"
             android:hardwareAccelerated="true"
-            android:screenOrientation="sensor"
-            android:exported="false" />
+            android:screenOrientation="sensor" />
         <activity
             android:name=".activity.SingleContentActivity"
             android:exported="false"

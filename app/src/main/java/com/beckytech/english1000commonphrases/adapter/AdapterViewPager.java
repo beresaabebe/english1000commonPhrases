@@ -44,6 +44,7 @@ public class AdapterViewPager extends RecyclerView.Adapter<AdapterViewPager.View
         ModelViewPager modelViewPager = viewPagerList.get(position);
         holder.textView.setText(modelViewPager.getTag());
         holder.imageView.setImageResource(modelViewPager.getImage());
+        holder.imageView.setAlpha(0.9F);
         holder.itemView.setOnClickListener(v -> onClickedContent.itemClicked(modelViewPager));
     }
 

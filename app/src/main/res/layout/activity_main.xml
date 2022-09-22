@@ -17,12 +17,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/view_pager_other_cat_main"
+            android:layout_below="@id/viewPager_main"/>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:nestedScrollingEnabled="false"
             android:layout_height="match_parent"
-            android:layout_below="@id/viewPager_main"
+            android:layout_below="@id/view_pager_other_cat_main"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/main_item_list" />
 
