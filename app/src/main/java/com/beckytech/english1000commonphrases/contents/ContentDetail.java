@@ -1142,9 +1142,9 @@ public class ContentDetail {
             "Good evening.",
             "Evening.",
 
-            "Long time no see! (informal) I haven't seen you in an age!",
-            "I haven't seen you in a month",
-            "of Sundays!",
+            "Long time no see! (informal)",
+            "I haven't seen you in an age!",
+            "I haven't seen you in a month of Sundays!",
             "a month of Sundays = a long time",
 
             "Welcome back, stranger!",
